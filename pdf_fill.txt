@@ -1,0 +1,32 @@
+# Collect user input
+first_name = input("Enter your first name: ")
+last_name = input("Enter your last name: ")
+number_of_items = input("Enter the number of items: ")
+article_number = input("Enter the article number: ")
+description = input("Enter the description: ")
+quantity = input("Enter the quantity: ")
+# Add futher input properties here
+
+# Path to the pdf_fill.txt file
+pdf_fill = # enter path to pdf_fill.txt"
+
+# Write the updated values to the file
+with open(pdf_fill, 'w') as file:
+    file.write(f"var invoiceNumberValue = ''; // Automatic\n")
+    file.write(f"var firstNameValue = '{first_name}'; // manually\n")
+    file.write(f"var lastNameValue = '{last_name}'; // Update this manually\n")
+    file.write(f"var numberOfItemsValue = '{number_of_items}'; // Update this manually\n")
+    file.write(f"var articleNumberValue = '{article_number}'; // Update this manually\n")
+    file.write(f"var descriptionValue = '{description}'; // Update this manually\n")
+    file.write(f"var qtyValue = '{quantity}'; // Update this manually\n")
+    file.write(f"var dateFieldValue = ''; // Automatic\n\n")
+    file.write(f"this.getField(\"invoice_number\").value = invoiceNumberValue;\n")
+    file.write(f"this.getField(\"first_name\").value = firstNameValue;\n")
+    file.write(f"this.getField(\"last_name\").value = lastNameValue;\n")
+    file.write(f"this.getField(\"number of items\").value = numberOfItemsValue;\n")
+    file.write(f"this.getField(\"article_number\").value = articleNumberValue;\n")
+    file.write(f"this.getField(\"description\").value = descriptionValue;\n")
+    file.write(f"this.getField(\"qty\").value = qtyValue;\n")
+    file.write(f"this.getField(\"Date Field\").value = dateFieldValue;")
+    # add futher values here
+```
